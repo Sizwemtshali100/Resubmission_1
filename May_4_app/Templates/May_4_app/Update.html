@@ -1,0 +1,15 @@
+{% extends 'May_4_app/Layout.html' %}
+
+{% block content %}
+<center>
+    <h1>Update</h1>
+
+        <form action="" method="POST">
+            {% csrf_token %}
+        {{Update_form.as_p}}
+        <input type="submit" value="Update Contract" 
+        class="btn btn-outline-success">
+
+
+</center>
+{% endblock %}

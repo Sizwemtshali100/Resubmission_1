@@ -1,0 +1,19 @@
+{% extends 'May_4_app/Layout.html' %}
+
+{% block content %}
+<center>
+    <h1>Contract details</h1>
+    <div class="card" style="width: 18rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{Details_get.Contract_ID}}</li>
+          <li class="list-group-item">{{Details_get.Initials}}</li>
+          <li class="list-group-item">{{Details_get.ID_Number}}</li>
+          <li class="list-group-item">{{Details_get.Surname}}</li>
+          <li class="list-group-item">{{Details_get.Premium}}</li>
+          <li class="list-group-item">{{Details_get.Name_of_Bank}}</li>
+          <li class="list-group-item">{{Details_get.Name_of_Branch}}</li>
+          <li class="list-group-item">{{Details_get.Name_of_Type}}</li>
+        </ul>
+      </div>
+</center>
+{% endblock %}

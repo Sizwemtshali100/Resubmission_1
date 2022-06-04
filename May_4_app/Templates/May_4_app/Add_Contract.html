@@ -1,0 +1,18 @@
+{% extends 'May_4_app/Layout.html' %}
+
+{% block content %}
+<center>
+    <h1>Add new Contract</h1>
+    {% if Submitted %}
+        You have Submitted the Contract successfully.
+    {% else %}
+    
+        <form action="" method="POST">
+            {% csrf_token %}
+
+            {{ The_form.as_p }}
+            <input type="submit" value="Submit Contract">
+
+    {% endif %}
+</center>
+{% endblock %}

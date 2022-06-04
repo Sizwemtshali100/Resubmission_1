@@ -1,0 +1,46 @@
+{% extends 'May_4_app/Layout.html' %}
+
+{% block content %}
+<center>
+    <h1>Home</h1>
+    <table class="table table-hover">
+        {% for Contracts_page in Contracts_View %}
+        <tr>
+            <td>
+            <a href="{% url 'Details' Contracts_page.id %}">
+                {{Contracts_page}}<br> 
+            </a>
+            </td>
+            <td>
+                <a href="{% url 'Update' Contracts_page.id %}"
+                class="btn btn-primary">
+                    - Update
+                </a>
+                <a href="{% url 'Delete' Contracts_page.id %}"
+                class="btn btn-danger">
+                    - Delete
+                </a>
+            </td>
+        </tr>
+        {% endfor %}
+      </table>
+   <!--   <br/>
+      {{Contract_pages}}
+      <br/>
+      Page {{Contract_pages.number}}
+{% if Contract_pages.has_previous %}
+<a href="?page=1"> 1 </a>
+<a href="?page={{Contract_pages.previous_page_number}}"> Previous </a>
+
+{% endif %}
+<br/>
+page {{ Contract_pages.number }} of {{ Contract_pages.paginator.num_pages}}
+
+{% if Contract_pages.has_next %}
+    <a href="?page={{ Contract_pages.next_page_number }}"> Next </a>
+    <a href="?page={{ Contract_pages.paginator.num_pages }}"> Last </a>
+
+{% endif %}
+-->
+</center>
+{% endblock %}
